@@ -2,11 +2,7 @@ import {useState} from 'react';
 
 import type {LoadingState} from '../types';
 
-type Props = {
-  initialState?: LoadingState;
-};
-
-export const useLoading = ({initialState = 'init'}: Props) => {
+export const useLoading = (initialState: LoadingState = 'init') => {
   const [loadingState, setLoadingState] = useState<LoadingState>(initialState);
 
   return {

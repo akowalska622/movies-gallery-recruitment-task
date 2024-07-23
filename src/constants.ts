@@ -9,6 +9,7 @@ export const GENRE_ID = {
 export const GENRE_MAP = {
   [GENRE_ID.ADVENTURE]: {
     name: 'Adventure',
+    key: 'adventure',
     styles: {
       color: themeConfig.colors.primary,
       fontFamily: 'Lato-Regular',
@@ -16,6 +17,7 @@ export const GENRE_MAP = {
   },
   [GENRE_ID.ANIMATION]: {
     name: 'Animation',
+    key: 'animation',
     styles: {
       color: themeConfig.colors.secondary,
       fontFamily: 'DancingScript-Regular',
@@ -23,6 +25,7 @@ export const GENRE_MAP = {
   },
   [GENRE_ID.DOCUMENTARY]: {
     name: 'Documentary',
+    key: 'documentary',
     styles: {
       color: themeConfig.colors.tertiary,
       fontFamily: 'PlaywriteHRLijeva-Regular',
