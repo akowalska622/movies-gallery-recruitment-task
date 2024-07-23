@@ -1,6 +1,4 @@
-import {GENRE_ID} from '../constants';
-
-type GenreId = (typeof GENRE_ID)[keyof typeof GENRE_ID];
+import type {GenreId} from '../types';
 
 export const fetchFromTMDB = async (
   endpoint: string,
