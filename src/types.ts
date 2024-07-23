@@ -9,3 +9,5 @@ export type RootStackParamList = {
 };
 
 export type GenreId = (typeof GENRE_ID)[keyof typeof GENRE_ID];
+
+export type LoadingState = 'init' | 'loading' | 'ready';
