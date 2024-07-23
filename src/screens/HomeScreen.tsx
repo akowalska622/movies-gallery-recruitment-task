@@ -8,6 +8,7 @@ import type {RootStackParamList} from '../types';
 import {APP_ROUTES} from '../routes';
 import {GENRE_ID} from '../constants';
 import {getGenreStyles} from '../helpers';
+import {ScreenWrapper} from '../components';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
@@ -33,12 +34,12 @@ interface HeadingProps {
 const Heading = styled.Text<HeadingProps>`
   font-size: ${({isHeading, theme: {fontSizes}}) =>
     isHeading ? fontSizes.large : fontSizes.small};
-  color: ${({theme: {colors}}) => colors.persianGreen};
+  color: ${({theme: {colors}}) => colors.lightBlue};
 `;
 
 export const HomeScreen = ({navigation}: Props) => {
   return (
-    <View>
+    <ScreenWrapper>
       <Text style={getGenreStyles(GENRE_ID.ADVENTURE)}>Lato text</Text>
       <Text style={styles.dancingScript}>Dancing script text</Text>
       <Text style={styles.playWrite}>Playwrite text</Text>
@@ -53,6 +54,6 @@ export const HomeScreen = ({navigation}: Props) => {
           navigation.navigate(APP_ROUTES.DETAILS, {movieId: '123'})
         }
       />
-    </View>
+    </ScreenWrapper>
   );
 };

@@ -2,13 +2,15 @@ import React from 'react';
 import {ThemeProvider} from 'styled-components/native';
 
 export const themeConfig = {
+  // TODO configure colors
   colors: {
-    white: '#FFFDF9',
-    black: '#36313D',
-    federalBlue: '#0F084B',
-    marianBlue: '#26408B',
-    lightBlue: '#A6CFD5',
-    mintGreen: '#C2E7D9',
+    white: '#fff',
+    black: '#000',
+    primary: '#5a3b81',
+    secondary: '#5C8374',
+    tertiary: '#93B1A6',
+    text: '#fff2f2',
+    surface: '#515151',
   },
   spacing: {
     space4: '4px',

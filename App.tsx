@@ -14,12 +14,22 @@ const App = () => {
     <Theme>
       <NavigationContainer>
         <RootStack.Navigator initialRouteName="Home">
-          <RootStack.Screen name="Home" component={HomeScreen} />
+          <RootStack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{title: 'Home'}}
+          />
           <RootStack.Screen
             name="MovieDetails"
             component={MovieDetailsScreen}
+            // TODO add movie title here
+            options={{title: 'Movie Details'}}
           />
-          <RootStack.Screen name="WishList" component={WishListScreen} />
+          <RootStack.Screen
+            name="WishList"
+            component={WishListScreen}
+            options={{title: 'Wish List'}}
+          />
         </RootStack.Navigator>
       </NavigationContainer>
     </Theme>

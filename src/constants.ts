@@ -10,21 +10,21 @@ export const GENRE_MAP = {
   [GENRE_ID.ADVENTURE]: {
     name: 'Adventure',
     styles: {
-      color: themeConfig.colors.marianBlue,
+      color: themeConfig.colors.primary,
       fontFamily: 'Lato-Regular',
     },
   },
   [GENRE_ID.ANIMATION]: {
     name: 'Animation',
     styles: {
-      color: themeConfig.colors.mintGreen,
+      color: themeConfig.colors.secondary,
       fontFamily: 'DancingScript-Regular',
     },
   },
   [GENRE_ID.DOCUMENTARY]: {
     name: 'Documentary',
     styles: {
-      color: themeConfig.colors.lightBlue,
+      color: themeConfig.colors.tertiary,
       fontFamily: 'PlaywriteHRLijeva-Regular',
     },
   },
