@@ -1,23 +1,22 @@
 import React from 'react';
-import {SafeAreaView, StatusBar, Text, useColorScheme} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import type {RootStackParamList} from './src/types';
+
+import {MovieDetailsScreen, HomeScreen, WishListScreen} from './src/screens';
+
+const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <Text>welcome to the app</Text>
-    </SafeAreaView>
+    <NavigationContainer>
+      <RootStack.Navigator initialRouteName="Home">
+        <RootStack.Screen name="Home" component={HomeScreen} />
+        <RootStack.Screen name="MovieDetails" component={MovieDetailsScreen} />
+        <RootStack.Screen name="WishList" component={WishListScreen} />
+      </RootStack.Navigator>
+    </NavigationContainer>
   );
 };
 
