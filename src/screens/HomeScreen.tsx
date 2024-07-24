@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {Text, ScrollView} from 'react-native';
 import {useTranslation} from 'react-i18next';
 
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
@@ -21,7 +21,7 @@ export const HomeScreen = ({navigation}: Props) => {
   const {movies: animationMovies} = useMovies(GENRE_ID.DOCUMENTARY);
 
   return (
-    <ScreenWrapper>
+    <ScreenWrapper isScrollView>
       {/*
       <Gallery id={id} /> fetch movies by genre id inside
       */}

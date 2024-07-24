@@ -18,6 +18,12 @@ export const themeConfig = {
     medium: '16px',
     large: '24px',
   },
+  spaces: {
+    8: '8px',
+    16: '16px',
+    24: '24px',
+    32: '32px',
+  },
 };
 
 type ThemeProps = {
