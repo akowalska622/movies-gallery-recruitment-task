@@ -5,13 +5,13 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import type {RootStackParamList} from './src/types';
 
 import {MovieDetailsScreen, HomeScreen, WishListScreen} from './src/screens';
-import {Theme} from './src/Theme';
+import {Providers} from './src/Providers';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 const App = () => {
   return (
-    <Theme>
+    <Providers>
       <NavigationContainer>
         <RootStack.Navigator initialRouteName="Home">
           <RootStack.Screen
@@ -32,7 +32,7 @@ const App = () => {
           />
         </RootStack.Navigator>
       </NavigationContainer>
-    </Theme>
+    </Providers>
   );
 };
 
