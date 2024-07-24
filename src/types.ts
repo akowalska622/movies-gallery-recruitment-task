@@ -54,7 +54,3 @@ export interface MovieDetails extends MovieOverview {
   status: string;
   tagline: string;
 }
-
-export interface MoviesCollection {
-  [key: string]: MovieOverview[];
-}
