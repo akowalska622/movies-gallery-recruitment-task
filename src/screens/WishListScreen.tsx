@@ -1,7 +1,7 @@
 import React from 'react';
-import {FlatList, Text, ListRenderItem} from 'react-native';
+import {FlatList, Text, View, ListRenderItem} from 'react-native';
 
-import {Card, ScreenWrapper} from '../components';
+import {Card} from '../components';
 import {useWishList} from '../context';
 import {getPosterURL} from '../helpers';
 import {themeConfig} from '../Theme';
@@ -22,7 +22,7 @@ export const WishListScreen = () => {
   const {wishlist} = useWishList();
 
   return (
-    <ScreenWrapper>
+    <View>
       {wishlist.length > 0 ? (
         <FlatList
           data={wishlist}
@@ -30,11 +30,12 @@ export const WishListScreen = () => {
           renderItem={renderWishlistItem}
           numColumns={2}
           columnWrapperStyle={{gap: 20, marginBottom: 15}}
+          contentContainerStyle={{padding: 16}}
           showsVerticalScrollIndicator={false}
         />
       ) : (
         <Text> no items </Text>
       )}
-    </ScreenWrapper>
+    </View>
   );
 };
