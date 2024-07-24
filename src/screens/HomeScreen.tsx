@@ -26,11 +26,15 @@ export const HomeScreen = ({navigation}: Props) => {
       <Gallery id={id} /> fetch movies by genre id inside
       */}
       <Card
-        title="Card title"
+        title="Despicable me 4"
+        year="2024"
         backgroundImage={
           'https://image.tmdb.org/t/p/original/95prV91f4DxkBnLU43YjLbU1m3q.jpg'
         }
         tintColor="#571515"
+        onPress={() =>
+          navigation.navigate(APP_ROUTES.DETAILS, {movieId: '123'})
+        }
       />
       <Text>{t('wishlist')}</Text>
       <Text style={getGenreStyles(GENRE_ID.ADVENTURE)}>

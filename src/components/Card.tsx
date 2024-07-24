@@ -1,14 +1,20 @@
 import React from 'react';
-import {View, Image, Text} from 'react-native';
+import {View, Image, Text, Pressable} from 'react-native';
 import styled from 'styled-components/native';
+
+import {Title} from './Title';
+import {BodyText} from './BodyText';
 
 type Props = {
   title: string;
+  year: string;
   backgroundImage?: string;
   tintColor?: string;
+  onPress?: () => void;
 };
 
 const CardWrapper = styled(View)<{tintColor?: string}>`
+  position: relative;
   height: 270px;
   width: 190px;
   border-radius: 6px;
@@ -17,7 +23,6 @@ const CardWrapper = styled(View)<{tintColor?: string}>`
 
 // TODO check android
 const ShadowWrapper = styled(View)`
-  position: relative;
   shadow-opacity: 0.2;
   shadow-radius: 12px;
   shadow-color: #000;
@@ -36,27 +41,31 @@ const ContentWrapper = styled(View)<{tintColor?: string}>`
   background-color: ${({tintColor, theme}) =>
     tintColor || theme.colors.primary};
   margin-top: auto;
-  min-height: 80px;
+  min-height: 90px;
   padding: 15px 10px;
   opacity: 0.9;
 `;
 
-const Title = styled(Text)`
-  color: ${({theme}) => theme.colors.text};
-  font-size: ${({theme}) => theme.fontSizes.large};
-`;
-
-export const Card = ({title, backgroundImage, tintColor}: Props) => {
+export const Card = ({
+  title,
+  year,
+  backgroundImage,
+  tintColor,
+  onPress,
+}: Props) => {
   return (
-    <ShadowWrapper>
-      <CardWrapper tintColor={tintColor}>
-        {backgroundImage && (
-          <StyledImage source={{uri: backgroundImage}} resizeMode="cover" />
-        )}
-        <ContentWrapper tintColor={tintColor}>
-          <Title>{title}</Title>
-        </ContentWrapper>
-      </CardWrapper>
-    </ShadowWrapper>
+    <Pressable onPress={onPress}>
+      <ShadowWrapper>
+        <CardWrapper tintColor={tintColor}>
+          {backgroundImage && (
+            <StyledImage source={{uri: backgroundImage}} resizeMode="cover" />
+          )}
+          <ContentWrapper tintColor={tintColor}>
+            <Title>{title}</Title>
+            <BodyText>{year}</BodyText>
+          </ContentWrapper>
+        </CardWrapper>
+      </ShadowWrapper>
+    </Pressable>
   );
 };
