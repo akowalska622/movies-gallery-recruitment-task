@@ -51,6 +51,7 @@ export const Gallery = ({genreId, title}: Props) => {
               year={movie.release_date}
               backgroundImage={getPosterURL(movie.poster_path)}
               tintColor={getGenreStyles(genreId).color}
+              size="large"
               onPress={() =>
                 navigation.navigate(APP_ROUTES.DETAILS, {
                   movieId: movie.id,

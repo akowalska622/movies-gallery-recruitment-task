@@ -13,6 +13,7 @@ const StyledRow = styled(View)<Props>`
   flex-direction: ${({reverse}) => (reverse ? 'row-reverse' : 'row')};
   justify-content: ${({justify}) => justify || 'flex-start'};
   align-items: ${({align}) => align || 'stretch'};
+  gap: 10px;
 `;
 
 export const ContentRow: React.FC<Props> = ({children, ...props}) => (

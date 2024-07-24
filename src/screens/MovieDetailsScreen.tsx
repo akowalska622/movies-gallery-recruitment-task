@@ -58,14 +58,10 @@ export const MovieDetailsScreen = ({route}: Props) => {
       {!isLoading && !movieDetails && <Title>Movie not found</Title>}
       {!isLoading && movieDetails && (
         <ContentWrapper>
-          <ContentRow justify="space-between" align="center">
-            <Title {...genreStyles} fontSize={40}>
-              {movieDetails.title}
-            </Title>
-            {isMovieInWishlist && (
-              <HeartIcon height={35} width={35} color={genreStyles.color} />
-            )}
-          </ContentRow>
+          <Title {...genreStyles} fontSize={40}>
+            {movieDetails.title}
+          </Title>
+
           <BodyText {...genreStyles}>{movieDetails.tagline}</BodyText>
           <MovieDetailsWrapper>
             <MovieImage
@@ -85,9 +81,17 @@ export const MovieDetailsScreen = ({route}: Props) => {
                 </>
               ) : (
                 <>
-                  <BodyText {...genreStyles} fontSize={18}>
-                    {t('inWishlist')}
-                  </BodyText>
+                  <ContentRow align="center">
+                    <HeartIcon
+                      height={20}
+                      width={20}
+                      color={genreStyles.color}
+                    />
+
+                    <BodyText {...genreStyles} fontSize={18}>
+                      {t('inWishlist')}
+                    </BodyText>
+                  </ContentRow>
                   <Button
                     variant="outlined"
                     {...genreStyles}

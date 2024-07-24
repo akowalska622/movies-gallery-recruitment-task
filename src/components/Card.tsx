@@ -9,19 +9,22 @@ import {themeConfig} from '../Theme';
 type Props = {
   title: string;
   year: string;
+  size?: 'small' | 'large';
   backgroundImage?: string;
   tintColor?: string;
   onPress?: () => void;
 };
 
-const CardWrapper = styled(View)<{tintColor?: string}>`
+const CardWrapper = styled(View)<{
+  tintColor?: string;
+  size?: 'small' | 'large';
+}>`
   position: relative;
   height: 270px;
-  width: 190px;
+  width: ${({size}) => (size === 'small' ? '170px' : '200px')};
   border-radius: 6px;
   overflow: hidden;
 `;
-
 // TODO check android
 const ShadowWrapper = styled(View)`
   shadow-opacity: 0.2;
@@ -53,11 +56,12 @@ export const Card = ({
   backgroundImage,
   tintColor,
   onPress,
+  size = 'small',
 }: Props) => {
   return (
     <Pressable onPress={onPress}>
       <ShadowWrapper>
-        <CardWrapper tintColor={tintColor}>
+        <CardWrapper tintColor={tintColor} size={size}>
           {backgroundImage && (
             <StyledImage source={{uri: backgroundImage}} resizeMode="cover" />
           )}
