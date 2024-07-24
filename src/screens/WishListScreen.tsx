@@ -1,26 +1,26 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
-import type {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {View} from 'react-native';
 
-import type {RootStackParamList} from '../types';
-import {APP_ROUTES} from '../router/routes';
+import {Card} from '../components';
+import {useWishList} from '../context';
+import {getPosterURL} from '../helpers';
+import {themeConfig} from '../Theme';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'WishList'>;
+export const WishListScreen = () => {
+  const {wishlist} = useWishList();
 
-export const WishListScreen = ({navigation}: Props) => {
+  // TODO flatlist
   return (
     <View>
-      <Text>Wishlist screen</Text>
-      <Button
-        title="Home"
-        onPress={() => navigation.navigate(APP_ROUTES.HOME)}
-      />
-      <Button
-        title="Details"
-        onPress={() =>
-          navigation.navigate(APP_ROUTES.DETAILS, {movieId: '123'})
-        }
-      />
+      {wishlist.map(movie => (
+        <Card
+          key={movie.id}
+          title={movie.title}
+          year={movie.release_date}
+          backgroundImage={getPosterURL(movie.poster_path)}
+          tintColor={themeConfig.colors.wishlist}
+        />
+      ))}
     </View>
   );
 };

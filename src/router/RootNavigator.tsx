@@ -5,6 +5,7 @@ import type {RootStackParamList} from '../types';
 
 import {MovieDetailsScreen, HomeScreen, WishListScreen} from '../screens';
 import {HeaderRightButton} from './HeaderRightButton';
+import {themeConfig} from '../Theme';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
@@ -27,17 +28,25 @@ export const RootNavigator = () => {
         options={({route}) => ({
           title: route.params.title,
           headerStyle: {
-            backgroundColor: route.params.tintColor || 'white',
+            backgroundColor: route.params.tintColor || themeConfig.colors.white,
           },
           headerTitleStyle: {
-            color: route.params.fontColor || 'black',
+            color: route.params.fontColor || themeConfig.colors.black,
           },
         })}
       />
       <RootStack.Screen
         name="WishList"
         component={WishListScreen}
-        options={{title: 'Wish List'}}
+        options={{
+          title: 'Wish List',
+          headerStyle: {
+            backgroundColor: themeConfig.colors.wishlist,
+          },
+          headerTitleStyle: {
+            color: themeConfig.colors.text,
+          },
+        }}
       />
     </RootStack.Navigator>
   );
