@@ -2,6 +2,7 @@ import React from 'react';
 import {Image, View} from 'react-native';
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import styled from 'styled-components/native';
+import {useTranslation} from 'react-i18next';
 
 import type {RootStackParamList} from '../types';
 
@@ -34,12 +35,13 @@ const MovieImage = styled(Image)`
 `;
 
 export const MovieDetailsScreen = ({route}: Props) => {
+  const {t} = useTranslation();
   const {movieId, genreId} = route.params;
   const {movieDetails, isLoading} = useMovieDetails(movieId);
   const genreStyles = getGenreStyles(genreId);
 
   const belongsToCollection = !!movieDetails?.belongs_to_collection;
-  // TODO locales
+
   return (
     <ScreenWrapper isScrollView>
       {isLoading && <Title>Loading...</Title>}
@@ -55,27 +57,30 @@ export const MovieDetailsScreen = ({route}: Props) => {
               source={{uri: getPosterURL(movieDetails.poster_path)}}
             />
             <MovieDetailsSection>
-              {/* TODO icon svg */}
-              <Button {...genreStyles}>+ wishlist</Button>
+              <Button {...genreStyles}>{t('addToWishlist')}</Button>
               <BodyText {...genreStyles}>
-                Release date:&nbsp;{movieDetails.release_date}
+                {t('releaseDate', {date: movieDetails.release_date})}
               </BodyText>
               <BodyText {...genreStyles}>
-                Runtime:&nbsp;{movieDetails.runtime} minutes
+                {t('runtime', {minutes: movieDetails.runtime})}
               </BodyText>
               <BodyText {...genreStyles}>
-                Genres:&nbsp;
-                {movieDetails.genres.map(({name}) => name).join(', ')}
+                {t('genres', {
+                  genres: movieDetails.genres.map(({name}) => name).join(', '),
+                })}
               </BodyText>
               <BodyText {...genreStyles}>
-                Production: &nbsp;
-                {movieDetails.production_companies
-                  .map(({name}) => name)
-                  .join(', ')}
+                {t('production', {
+                  companies: movieDetails.production_companies
+                    .map(({name}) => name)
+                    .join(', '),
+                })}
               </BodyText>
               {belongsToCollection && (
                 <BodyText {...genreStyles}>
-                  Collection: &nbsp; {movieDetails.belongs_to_collection?.name}
+                  {t('collection', {
+                    collection: movieDetails.belongs_to_collection?.name,
+                  })}
                 </BodyText>
               )}
             </MovieDetailsSection>
