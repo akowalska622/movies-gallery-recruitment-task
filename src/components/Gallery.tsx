@@ -55,6 +55,9 @@ export const Gallery = ({genreId, title}: Props) => {
                 navigation.navigate(APP_ROUTES.DETAILS, {
                   movieId: movie.id,
                   title: movie.title,
+                  genreId: genreId,
+                  tintColor: getGenreStyles(genreId).color,
+                  fontColor: getGenreStyles(genreId).fontColor,
                 })
               }
             />

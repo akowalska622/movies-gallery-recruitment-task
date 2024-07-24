@@ -4,6 +4,7 @@ import styled from 'styled-components/native';
 
 import {Title} from './Title';
 import {BodyText} from './BodyText';
+import {themeConfig} from '../Theme';
 
 type Props = {
   title: string;
@@ -61,8 +62,12 @@ export const Card = ({
             <StyledImage source={{uri: backgroundImage}} resizeMode="cover" />
           )}
           <ContentWrapper tintColor={tintColor}>
-            <Title numberOfLines={2}>{title}</Title>
-            <BodyText>{year.split('-')[0]}</BodyText>
+            <Title numberOfLines={2} color={themeConfig.colors.white}>
+              {title}
+            </Title>
+            <BodyText color={themeConfig.colors.white}>
+              {year.split('-')[0]}
+            </BodyText>
           </ContentWrapper>
         </CardWrapper>
       </ShadowWrapper>

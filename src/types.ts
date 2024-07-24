@@ -7,6 +7,9 @@ export type RootStackParamList = {
   MovieDetails: {
     movieId: number;
     title: string;
+    genreId: GenreId;
+    tintColor?: string;
+    fontColor?: string;
   };
   WishList: undefined;
 };

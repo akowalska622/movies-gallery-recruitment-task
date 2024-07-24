@@ -22,7 +22,15 @@ const App = () => {
           <RootStack.Screen
             name="MovieDetails"
             component={MovieDetailsScreen}
-            options={({route}) => ({title: route.params.title})}
+            options={({route}) => ({
+              title: route.params.title,
+              headerStyle: {
+                backgroundColor: route.params.tintColor || 'white',
+              },
+              headerTitleStyle: {
+                color: route.params.fontColor || 'black',
+              },
+            })}
           />
           <RootStack.Screen
             name="WishList"

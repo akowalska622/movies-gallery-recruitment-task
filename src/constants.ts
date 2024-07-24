@@ -12,6 +12,7 @@ export const GENRE_MAP = {
     key: 'adventure',
     styles: {
       color: themeConfig.colors.primary,
+      fontColor: themeConfig.colors.white,
       fontFamily: 'Lato-Regular',
     },
   },
@@ -20,6 +21,7 @@ export const GENRE_MAP = {
     key: 'animation',
     styles: {
       color: themeConfig.colors.secondary,
+      fontColor: themeConfig.colors.white,
       fontFamily: 'DancingScript-Regular',
     },
   },
@@ -28,6 +30,7 @@ export const GENRE_MAP = {
     key: 'documentary',
     styles: {
       color: themeConfig.colors.tertiary,
+      fontColor: themeConfig.colors.white,
       fontFamily: 'PlaywriteHRLijeva-Regular',
     },
   },
