@@ -24,9 +24,9 @@ const CardWrapper = styled(View)<{tintColor?: string}>`
 // TODO check android
 const ShadowWrapper = styled(View)`
   shadow-opacity: 0.2;
-  shadow-radius: 12px;
+  shadow-radius: 8px;
   shadow-color: #000;
-  shadow-offset: 0px 0px;
+  shadow-offset: 10px 10px;
 `;
 
 const StyledImage = styled(Image)`
@@ -62,7 +62,7 @@ export const Card = ({
           )}
           <ContentWrapper tintColor={tintColor}>
             <Title numberOfLines={2}>{title}</Title>
-            <BodyText>{year}</BodyText>
+            <BodyText>{year.split('-')[0]}</BodyText>
           </ContentWrapper>
         </CardWrapper>
       </ShadowWrapper>

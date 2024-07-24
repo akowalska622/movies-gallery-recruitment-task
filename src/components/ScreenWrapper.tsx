@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 
 const StyledScrollView = styled(ScrollView).attrs(() => ({
   contentContainerStyle: {
-    padding: 24,
+    paddingBottom: 16,
   },
 }))`
   flex: 1;
@@ -12,7 +12,7 @@ const StyledScrollView = styled(ScrollView).attrs(() => ({
 
 const StyledView = styled(View)`
   flex: 1;
-  padding: 24px;
+  padding: 16px;
 `;
 
 export const ScreenWrapper = ({isScrollView = false, ...props}) =>
