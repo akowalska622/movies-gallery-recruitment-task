@@ -40,20 +40,27 @@ export const Gallery = ({genreId, title}: Props) => {
       <TitleWrapper>
         <Title color={themeConfig.colors.black}>{title}</Title>
       </TitleWrapper>
-      <GalleryView horizontal showsHorizontalScrollIndicator={false}>
-        {movies.map(movie => (
-          <Card
-            key={movie.id}
-            title={movie.title}
-            year={movie.release_date}
-            backgroundImage={getPosterURL(movie.poster_path)}
-            tintColor={getGenreStyles(genreId).color}
-            onPress={() =>
-              navigation.navigate(APP_ROUTES.DETAILS, {movieId: movie.id})
-            }
-          />
-        ))}
-      </GalleryView>
+      {isLoading ? (
+        <Title>Loading...</Title>
+      ) : (
+        <GalleryView horizontal showsHorizontalScrollIndicator={false}>
+          {movies.map(movie => (
+            <Card
+              key={movie.id}
+              title={movie.title}
+              year={movie.release_date}
+              backgroundImage={getPosterURL(movie.poster_path)}
+              tintColor={getGenreStyles(genreId).color}
+              onPress={() =>
+                navigation.navigate(APP_ROUTES.DETAILS, {
+                  movieId: movie.id,
+                  title: movie.title,
+                })
+              }
+            />
+          ))}
+        </GalleryView>
+      )}
     </>
   );
 };

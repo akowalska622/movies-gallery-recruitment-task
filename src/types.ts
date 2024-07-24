@@ -6,6 +6,7 @@ export type RootStackParamList = {
   Home: undefined;
   MovieDetails: {
     movieId: number;
+    title: string;
   };
   WishList: undefined;
 };

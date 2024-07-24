@@ -17,13 +17,12 @@ const App = () => {
           <RootStack.Screen
             name="Home"
             component={HomeScreen}
-            options={{title: 'Home'}}
+            options={{title: 'Browse Movies'}}
           />
           <RootStack.Screen
             name="MovieDetails"
             component={MovieDetailsScreen}
-            // TODO add movie title here
-            options={{title: 'Movie Details'}}
+            options={({route}) => ({title: route.params.title})}
           />
           <RootStack.Screen
             name="WishList"
