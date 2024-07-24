@@ -7,45 +7,20 @@ import type {RootStackParamList} from '../types';
 
 import {APP_ROUTES} from '../routes';
 import {GENRE_ID} from '../constants';
-import {getGenreStyles} from '../helpers';
-import {ScreenWrapper, Button, Card} from '../components';
-import {useMovies} from '../hooks';
+import {ScreenWrapper, Button, Gallery} from '../components';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
 export const HomeScreen = ({navigation}: Props) => {
   const {t} = useTranslation();
-  // TODO use this hook inside of gallery component
-  const {movies: adventureMovies} = useMovies(GENRE_ID.ADVENTURE);
-  const {movies: documentaryMovies} = useMovies(GENRE_ID.ANIMATION);
-  const {movies: animationMovies} = useMovies(GENRE_ID.DOCUMENTARY);
 
   return (
     <ScreenWrapper isScrollView>
-      {/*
-      <Gallery id={id} /> fetch movies by genre id inside
-      */}
-      <Card
-        title="Despicable me 4"
-        year="2024"
-        backgroundImage={
-          'https://image.tmdb.org/t/p/original/95prV91f4DxkBnLU43YjLbU1m3q.jpg'
-        }
-        tintColor="#571515"
-        onPress={() =>
-          navigation.navigate(APP_ROUTES.DETAILS, {movieId: '123'})
-        }
-      />
       <Text>{t('wishlist')}</Text>
-      <Text style={getGenreStyles(GENRE_ID.ADVENTURE)}>
-        {adventureMovies.map(movie => movie.title)}
-      </Text>
-      <Text style={getGenreStyles(GENRE_ID.DOCUMENTARY)}>
-        {documentaryMovies.map(movie => movie.title)}
-      </Text>
-      <Text style={getGenreStyles(GENRE_ID.ANIMATION)}>
-        {animationMovies.map(movie => movie.title)}
-      </Text>
+      <Gallery genreId={GENRE_ID.ADVENTURE} />
+      <Gallery genreId={GENRE_ID.ANIMATION} />
+      <Gallery genreId={GENRE_ID.DOCUMENTARY} />
+
       <Button onPress={() => navigation.navigate(APP_ROUTES.WISHLIST)}>
         Wishlist
       </Button>

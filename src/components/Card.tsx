@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, Text, Pressable} from 'react-native';
+import {View, Image, Pressable} from 'react-native';
 import styled from 'styled-components/native';
 
 import {Title} from './Title';
@@ -41,7 +41,7 @@ const ContentWrapper = styled(View)<{tintColor?: string}>`
   background-color: ${({tintColor, theme}) =>
     tintColor || theme.colors.primary};
   margin-top: auto;
-  min-height: 90px;
+  height: 110px;
   padding: 15px 10px;
   opacity: 0.9;
 `;
@@ -61,7 +61,7 @@ export const Card = ({
             <StyledImage source={{uri: backgroundImage}} resizeMode="cover" />
           )}
           <ContentWrapper tintColor={tintColor}>
-            <Title>{title}</Title>
+            <Title numberOfLines={2}>{title}</Title>
             <BodyText>{year}</BodyText>
           </ContentWrapper>
         </CardWrapper>

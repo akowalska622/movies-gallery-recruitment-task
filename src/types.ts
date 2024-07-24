@@ -1,12 +1,16 @@
+import type {NativeStackNavigationProp} from '@react-navigation/native-stack';
+
 import {GENRE_ID} from './constants';
 
 export type RootStackParamList = {
   Home: undefined;
   MovieDetails: {
-    movieId: string;
+    movieId: number;
   };
   WishList: undefined;
 };
+
+export type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 export type GenreId = (typeof GENRE_ID)[keyof typeof GENRE_ID];
 
