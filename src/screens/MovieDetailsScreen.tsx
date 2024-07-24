@@ -89,8 +89,8 @@ export const MovieDetailsScreen = ({route}: Props) => {
                     {t('inWishlist')}
                   </BodyText>
                   <Button
-                    {...genreStyles}
                     variant="outlined"
+                    {...genreStyles}
                     onPress={() => removeFromWishlist(movieDetails.id)}>
                     {t('removeFromWishlist')}
                   </Button>

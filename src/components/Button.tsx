@@ -31,28 +31,28 @@ const sizeButtonStyles = {
 
 const variantStyles = {
   wrapper: {
-    contained: css`
+    contained: css<ButtonProps>`
       background-color: ${({color, theme}) => color || theme.colors.primary};
       border: 1px solid ${({color, theme}) => color || theme.colors.primary};
     `,
-    outlined: css`
+    outlined: css<ButtonProps>`
       background-color: transparent;
       border: 1px solid ${({color, theme}) => color || theme.colors.primary};
     `,
-    text: css`
+    text: css<ButtonProps>`
       background-color: transparent;
       border: none;
     `,
   },
   text: {
-    contained: css`
-      color: ${({theme}) => theme.colors.white};
+    contained: css<ButtonProps>`
+      color: ${({fontColor, theme}) => fontColor || theme.colors.white};
     `,
-    outlined: css`
-      color: ${({theme}) => theme.colors.primary};
+    outlined: css<ButtonProps>`
+      color: ${({color, theme}) => color || theme.colors.primary};
     `,
-    text: css`
-      color: ${({theme}) => theme.colors.primary};
+    text: css<ButtonProps>`
+      color: ${({color, theme}) => color || theme.colors.primary};
     `,
   },
 };
@@ -74,16 +74,22 @@ const ButtonText = styled(Text)<ButtonProps>`
   ${({variant}) => variantStyles.text[variant || 'contained']}
 `;
 
-export const Button = ({
+export const Button: React.FC<ButtonProps> = ({
   size = 'small',
   variant = 'contained',
   children,
   fontFamily,
+  color,
+  fontColor,
   ...rest
-}: ButtonProps) => {
+}) => {
   return (
-    <ButtonContainer size={size} variant={variant} {...rest}>
-      <ButtonText variant={variant} fontFamily={fontFamily}>
+    <ButtonContainer size={size} variant={variant} color={color} {...rest}>
+      <ButtonText
+        variant={variant}
+        fontFamily={fontFamily}
+        color={color}
+        fontColor={fontColor}>
         {children}
       </ButtonText>
     </ButtonContainer>
