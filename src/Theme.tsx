@@ -11,12 +11,14 @@ export const themeConfig = {
     tertiary: '#93B1A6',
     text: '#fff2f2',
     surface: '#515151',
+    border: '#bcbcbc',
   },
   fonts: ['Lato', 'sans-serif'],
   fontSizes: {
     small: '14px',
     medium: '16px',
-    large: '24px',
+    large: '20px',
+    extraLarge: '24px',
   },
   spaces: {
     8: '8px',

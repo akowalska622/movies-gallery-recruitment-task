@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, ScrollView} from 'react-native';
+import {Text} from 'react-native';
 import {useTranslation} from 'react-i18next';
 
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
@@ -8,7 +8,7 @@ import type {RootStackParamList} from '../types';
 import {APP_ROUTES} from '../routes';
 import {GENRE_ID} from '../constants';
 import {getGenreStyles} from '../helpers';
-import {ScreenWrapper, Button} from '../components';
+import {ScreenWrapper, Button, Card} from '../components';
 import {useMovies} from '../hooks';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
@@ -25,6 +25,13 @@ export const HomeScreen = ({navigation}: Props) => {
       {/*
       <Gallery id={id} /> fetch movies by genre id inside
       */}
+      <Card
+        title="Card title"
+        backgroundImage={
+          'https://image.tmdb.org/t/p/original/95prV91f4DxkBnLU43YjLbU1m3q.jpg'
+        }
+        tintColor="#571515"
+      />
       <Text>{t('wishlist')}</Text>
       <Text style={getGenreStyles(GENRE_ID.ADVENTURE)}>
         {adventureMovies.map(movie => movie.title)}

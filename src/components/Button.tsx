@@ -10,10 +10,10 @@ interface ButtonProps extends PressableProps {
 const sizeButtonStyles = {
   wrapper: {
     small: css`
-      padding: 8px 16px;
+      padding: 12px 24px;
     `,
     large: css`
-      padding: 12px 24px;
+      padding: 16px 32px;
     `,
   },
   text: {
