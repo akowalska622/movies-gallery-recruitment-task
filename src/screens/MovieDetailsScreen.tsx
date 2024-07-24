@@ -1,14 +1,22 @@
 import React from 'react';
 import {Image, View} from 'react-native';
-import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import styled from 'styled-components/native';
 import {useTranslation} from 'react-i18next';
 
+import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import type {RootStackParamList} from '../types';
 
-import {BodyText, Button, ScreenWrapper, Title} from '../components';
+import {
+  BodyText,
+  Button,
+  ScreenWrapper,
+  Title,
+  ContentRow,
+} from '../components';
 import {useMovieDetails} from '../hooks';
 import {getGenreStyles, getPosterURL} from '../helpers';
+import {useWishList} from '../context';
+import HeartIcon from '../assets/icons/heart-icon.svg';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'MovieDetails'>;
 
@@ -38,7 +46,9 @@ export const MovieDetailsScreen = ({route}: Props) => {
   const {t} = useTranslation();
   const {movieId, genreId} = route.params;
   const {movieDetails, isLoading} = useMovieDetails(movieId);
+  const {addToWishlist, removeFromWishlist, isInWishlist} = useWishList();
   const genreStyles = getGenreStyles(genreId);
+  const isMovieInWishlist = isInWishlist(movieId);
 
   const belongsToCollection = !!movieDetails?.belongs_to_collection;
 
@@ -48,16 +58,44 @@ export const MovieDetailsScreen = ({route}: Props) => {
       {!isLoading && !movieDetails && <Title>Movie not found</Title>}
       {!isLoading && movieDetails && (
         <ContentWrapper>
-          <Title {...genreStyles} fontSize={40}>
-            {movieDetails.title}
-          </Title>
+          <ContentRow justify="space-between" align="center">
+            <Title {...genreStyles} fontSize={40}>
+              {movieDetails.title}
+            </Title>
+            {isMovieInWishlist && (
+              <HeartIcon height={35} width={35} color={genreStyles.color} />
+            )}
+          </ContentRow>
           <BodyText {...genreStyles}>{movieDetails.tagline}</BodyText>
           <MovieDetailsWrapper>
             <MovieImage
               source={{uri: getPosterURL(movieDetails.poster_path)}}
             />
             <MovieDetailsSection>
-              <Button {...genreStyles}>{t('addToWishlist')}</Button>
+              {!isMovieInWishlist ? (
+                <>
+                  <BodyText {...genreStyles} fontSize={18}>
+                    {t('watchLater')}
+                  </BodyText>
+                  <Button
+                    {...genreStyles}
+                    onPress={() => addToWishlist(movieDetails)}>
+                    {t('addToWishlist')}
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <BodyText {...genreStyles} fontSize={18}>
+                    {t('inWishlist')}
+                  </BodyText>
+                  <Button
+                    {...genreStyles}
+                    variant="outlined"
+                    onPress={() => removeFromWishlist(movieDetails.id)}>
+                    {t('removeFromWishlist')}
+                  </Button>
+                </>
+              )}
               <BodyText {...genreStyles}>
                 {t('releaseDate', {date: movieDetails.release_date})}
               </BodyText>

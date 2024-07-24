@@ -8,5 +8,8 @@
   "genres": "Genres {{genres}}",
   "production": "Production {{companies}}",
   "collection": "Collection {{collection}}",
-  "addToWishlist": "+ wishlist"
+  "addToWishlist": "+ wishlist",
+  "removeFromWishlist": "remove",
+  "inWishlist": "In your wishlist",
+  "watchLater": "Want to watch it later?"
 }
