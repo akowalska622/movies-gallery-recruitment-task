@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 
 const StyledScrollView = styled(ScrollView).attrs(() => ({
   contentContainerStyle: {
-    paddingBottom: 16,
+    paddingVertical: 16,
   },
 }))`
   flex: 1;
