@@ -3,7 +3,7 @@ import {View, Text, Button} from 'react-native';
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 
 import type {RootStackParamList} from '../types';
-import {APP_ROUTES} from '../routes';
+import {APP_ROUTES} from '../router/routes';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'WishList'>;
 

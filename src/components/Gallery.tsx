@@ -8,7 +8,7 @@ import {Card} from './Card';
 import {Title} from './Title';
 import {useMovies} from '../hooks';
 import {getPosterURL, getGenreStyles} from '../helpers';
-import {APP_ROUTES} from '../routes';
+import {APP_ROUTES} from '../router/routes';
 import {themeConfig} from '../Theme';
 
 type Props = {
