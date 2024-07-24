@@ -9,6 +9,7 @@ interface BodyTextProps {
 
 export const BodyText = styled(Text)<BodyTextProps>`
   color: ${({color, theme}) => color || theme.colors.black};
-  font-size: ${({fontSize, theme}) => `${fontSize}px` || theme.fontSizes.small};
+  font-size: ${({fontSize, theme}) =>
+    `${fontSize}px` || theme.fontSizes.medium};
   font-family: ${({fontFamily, theme}) => fontFamily || theme.fonts[0]};
 `;

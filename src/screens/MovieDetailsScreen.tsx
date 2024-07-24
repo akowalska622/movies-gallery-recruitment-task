@@ -15,12 +15,17 @@ const ContentWrapper = styled(View)`
   padding: 0 16px;
 `;
 
-const MovieDetails = styled(View)`
+const MovieDetailsWrapper = styled(View)`
   margin: 16px 0;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   gap: 8px;
+`;
+
+const MovieDetailsSection = styled(View)`
+  gap: 8px;
+  flex: 1;
 `;
 
 const MovieImage = styled(Image)`
@@ -33,6 +38,8 @@ export const MovieDetailsScreen = ({route}: Props) => {
   const {movieDetails, isLoading} = useMovieDetails(movieId);
   const genreStyles = getGenreStyles(genreId);
 
+  const belongsToCollection = !!movieDetails?.belongs_to_collection;
+  // TODO locales
   return (
     <ScreenWrapper isScrollView>
       {isLoading && <Title>Loading...</Title>}
@@ -40,14 +47,39 @@ export const MovieDetailsScreen = ({route}: Props) => {
       {!isLoading && movieDetails && (
         <ContentWrapper>
           <Title {...genreStyles} fontSize={40}>
-            {movieDetails?.title}
+            {movieDetails.title}
           </Title>
-          <MovieDetails>
+          <BodyText {...genreStyles}>{movieDetails.tagline}</BodyText>
+          <MovieDetailsWrapper>
             <MovieImage
-              source={{uri: getPosterURL(movieDetails?.poster_path)}}
+              source={{uri: getPosterURL(movieDetails.poster_path)}}
             />
-            <Button {...genreStyles}>Add to wishlist</Button>
-          </MovieDetails>
+            <MovieDetailsSection>
+              {/* TODO icon svg */}
+              <Button {...genreStyles}>+ wishlist</Button>
+              <BodyText {...genreStyles}>
+                Release date:&nbsp;{movieDetails.release_date}
+              </BodyText>
+              <BodyText {...genreStyles}>
+                Runtime:&nbsp;{movieDetails.runtime} minutes
+              </BodyText>
+              <BodyText {...genreStyles}>
+                Genres:&nbsp;
+                {movieDetails.genres.map(({name}) => name).join(', ')}
+              </BodyText>
+              <BodyText {...genreStyles}>
+                Production: &nbsp;
+                {movieDetails.production_companies
+                  .map(({name}) => name)
+                  .join(', ')}
+              </BodyText>
+              {belongsToCollection && (
+                <BodyText {...genreStyles}>
+                  Collection: &nbsp; {movieDetails.belongs_to_collection?.name}
+                </BodyText>
+              )}
+            </MovieDetailsSection>
+          </MovieDetailsWrapper>
           <BodyText {...genreStyles} fontSize={20}>
             {movieDetails.overview}
           </BodyText>

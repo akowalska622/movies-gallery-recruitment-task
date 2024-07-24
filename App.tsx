@@ -17,7 +17,7 @@ const App = () => {
           <RootStack.Screen
             name="Home"
             component={HomeScreen}
-            options={{title: 'Browse Movies'}}
+            options={{title: 'Movies'}}
           />
           <RootStack.Screen
             name="MovieDetails"
