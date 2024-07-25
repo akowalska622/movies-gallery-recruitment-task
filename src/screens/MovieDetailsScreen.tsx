@@ -18,6 +18,7 @@ import {getGenreStyles, getPosterURL} from '../helpers';
 import {useWishList} from '../context';
 import HeartIcon from '../assets/icons/heart-icon.svg';
 import {themeConfig} from '../Theme';
+import {UNKNOWN_GENRE_STYLES} from '../constants';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'MovieDetails'>;
 
@@ -48,7 +49,7 @@ export const MovieDetailsScreen = ({route}: Props) => {
   const {movieId, genreId} = route.params;
   const {movieDetails, isLoading} = useMovieDetails(movieId);
   const {addToWishlist, removeFromWishlist, isInWishlist} = useWishList();
-  const genreStyles = getGenreStyles(genreId);
+  const genreStyles = genreId ? getGenreStyles(genreId) : UNKNOWN_GENRE_STYLES;
   const isMovieInWishlist = isInWishlist(movieId);
 
   const belongsToCollection = !!movieDetails?.belongs_to_collection;

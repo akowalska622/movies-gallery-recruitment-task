@@ -32,12 +32,12 @@ const sizeButtonStyles = {
 const variantStyles = {
   wrapper: {
     contained: css<ButtonProps>`
-      background-color: ${({color, theme}) => color || theme.colors.primary};
-      border: 1px solid ${({color, theme}) => color || theme.colors.primary};
+      background-color: ${({color, theme}) => color || theme.colors.purple};
+      border: 1px solid ${({color, theme}) => color || theme.colors.purple};
     `,
     outlined: css<ButtonProps>`
       background-color: transparent;
-      border: 1px solid ${({color, theme}) => color || theme.colors.primary};
+      border: 1px solid ${({color, theme}) => color || theme.colors.purple};
     `,
     text: css<ButtonProps>`
       background-color: transparent;
@@ -49,10 +49,10 @@ const variantStyles = {
       color: ${({fontColor, theme}) => fontColor || theme.colors.white};
     `,
     outlined: css<ButtonProps>`
-      color: ${({color, theme}) => color || theme.colors.primary};
+      color: ${({color, theme}) => color || theme.colors.purple};
     `,
     text: css<ButtonProps>`
-      color: ${({color, theme}) => color || theme.colors.primary};
+      color: ${({color, theme}) => color || theme.colors.purple};
     `,
   },
 };

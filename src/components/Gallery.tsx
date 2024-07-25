@@ -57,8 +57,8 @@ export const Gallery = ({genreId, title}: Props) => {
                   movieId: movie.id,
                   title: movie.title,
                   genreId: genreId,
-                  tintColor: getGenreStyles(genreId).color,
-                  fontColor: getGenreStyles(genreId).fontColor,
+                  navigationTintColor: getGenreStyles(genreId).color,
+                  navigationFontColor: getGenreStyles(genreId).fontColor,
                 })
               }
             />

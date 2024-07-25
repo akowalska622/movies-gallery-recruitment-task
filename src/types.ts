@@ -7,9 +7,9 @@ export type RootStackParamList = {
   MovieDetails: {
     movieId: number;
     title: string;
-    genreId: GenreId;
-    tintColor?: string;
-    fontColor?: string;
+    genreId?: GenreId;
+    navigationTintColor?: string;
+    navigationFontColor?: string;
   };
   WishList: undefined;
 };
@@ -17,8 +17,6 @@ export type RootStackParamList = {
 export type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 export type GenreId = (typeof GENRE_ID)[keyof typeof GENRE_ID];
-
-export type LoadingState = 'init' | 'loading' | 'ready';
 
 export interface MovieOverview {
   adult: boolean;

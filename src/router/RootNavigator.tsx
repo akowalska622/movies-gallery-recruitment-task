@@ -28,10 +28,11 @@ export const RootNavigator = () => {
         options={({route}) => ({
           title: route.params.title,
           headerStyle: {
-            backgroundColor: route.params.tintColor || themeConfig.colors.white,
+            backgroundColor:
+              route.params.navigationTintColor || themeConfig.colors.white,
           },
           headerTitleStyle: {
-            color: route.params.fontColor || themeConfig.colors.black,
+            color: route.params.navigationFontColor || themeConfig.colors.black,
           },
         })}
       />
@@ -41,7 +42,7 @@ export const RootNavigator = () => {
         options={{
           title: 'Wish List',
           headerStyle: {
-            backgroundColor: themeConfig.colors.wishlist,
+            backgroundColor: themeConfig.colors.pink,
           },
           headerTitleStyle: {
             color: themeConfig.colors.text,

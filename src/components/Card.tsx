@@ -42,8 +42,7 @@ const StyledImage = styled(Image)`
 `;
 
 const ContentWrapper = styled(View)<{tintColor?: string}>`
-  background-color: ${({tintColor, theme}) =>
-    tintColor || theme.colors.primary};
+  background-color: ${({tintColor, theme}) => tintColor || theme.colors.purple};
   margin-top: auto;
   height: 110px;
   padding: 15px 10px;
