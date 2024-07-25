@@ -16,6 +16,6 @@ const StyledRow = styled(View)<Props>`
   gap: 10px;
 `;
 
-export const ContentRow: React.FC<Props> = ({children, ...props}) => (
+export const ContentRow = ({children, ...props}: Props) => (
   <StyledRow {...props}>{children}</StyledRow>
 );

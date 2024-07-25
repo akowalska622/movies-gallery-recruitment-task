@@ -1,3 +1,4 @@
+// Gallery.tsx
 import React from 'react';
 import {ScrollView, View, ActivityIndicator} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
@@ -42,15 +43,20 @@ export const Gallery = ({genreId, title}: Props) => {
 
   return (
     <>
-      <TitleWrapper>
-        <Title color={themeConfig.colors.black}>{title}</Title>
+      <TitleWrapper testID="gallery-title-wrapper">
+        <Title color={themeConfig.colors.black} testID="gallery-title">
+          {title}
+        </Title>
       </TitleWrapper>
       {isLoading ? (
-        <LoadingWrapper>
-          <ActivityIndicator size="large" />
+        <LoadingWrapper testID="gallery-loading">
+          <ActivityIndicator size="large" accessibilityHint="loading" />
         </LoadingWrapper>
       ) : (
-        <GalleryView horizontal showsHorizontalScrollIndicator={false}>
+        <GalleryView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          testID="gallery-scroll-view">
           {movies.map(movie => (
             <Card
               key={movie.id}

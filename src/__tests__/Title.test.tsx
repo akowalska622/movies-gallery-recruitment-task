@@ -5,7 +5,7 @@ import {screen} from '@testing-library/react-native';
 import {Title} from '../components/Title';
 import {renderWithProviders} from '../testUtils';
 
-describe('<Title />', () => {
+describe('Title component', () => {
   it('renders correctly with default styles', () => {
     renderWithProviders(<Title>Default Title</Title>);
 

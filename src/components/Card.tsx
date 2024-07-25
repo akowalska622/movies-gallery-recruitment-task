@@ -1,3 +1,4 @@
+// Card.tsx
 import React from 'react';
 import {View, Image, Pressable} from 'react-native';
 import styled from 'styled-components/native';
@@ -58,17 +59,24 @@ export const Card = ({
   size = 'small',
 }: Props) => {
   return (
-    <Pressable onPress={onPress}>
-      <ShadowWrapper>
-        <CardWrapper tintColor={tintColor} size={size}>
+    <Pressable onPress={onPress} testID="card-pressable">
+      <ShadowWrapper testID="card-shadow">
+        <CardWrapper tintColor={tintColor} size={size} testID="card-wrapper">
           {backgroundImage && (
-            <StyledImage source={{uri: backgroundImage}} resizeMode="cover" />
+            <StyledImage
+              source={{uri: backgroundImage}}
+              resizeMode="cover"
+              testID="card-image"
+            />
           )}
-          <ContentWrapper tintColor={tintColor}>
-            <Title numberOfLines={2} color={themeConfig.colors.white}>
+          <ContentWrapper tintColor={tintColor} testID="card-content">
+            <Title
+              numberOfLines={2}
+              color={themeConfig.colors.white}
+              testID="card-title">
               {title}
             </Title>
-            <BodyText color={themeConfig.colors.white}>
+            <BodyText color={themeConfig.colors.white} testID="card-year">
               {year.split('-')[0]}
             </BodyText>
           </ContentWrapper>
