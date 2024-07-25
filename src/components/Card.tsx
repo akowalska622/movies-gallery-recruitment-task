@@ -25,7 +25,7 @@ const CardWrapper = styled(View)<{
   border-radius: 6px;
   overflow: hidden;
 `;
-// TODO check android
+
 const ShadowWrapper = styled(View)`
   shadow-opacity: 0.2;
   shadow-radius: 8px;
