@@ -22,7 +22,7 @@ export const WishListScreen = () => {
   const {wishlist} = useWishList();
 
   return (
-    <View>
+    <>
       {wishlist.length > 0 ? (
         <FlatList
           data={wishlist}
@@ -34,8 +34,10 @@ export const WishListScreen = () => {
           showsVerticalScrollIndicator={false}
         />
       ) : (
-        <Text> no items </Text>
+        <View>
+          <Text> no items </Text>
+        </View>
       )}
-    </View>
+    </>
   );
 };

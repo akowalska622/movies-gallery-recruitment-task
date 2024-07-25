@@ -17,6 +17,7 @@ import {useMovieDetails} from '../hooks';
 import {getGenreStyles, getPosterURL} from '../helpers';
 import {useWishList} from '../context';
 import HeartIcon from '../assets/icons/heart-icon.svg';
+import {themeConfig} from '../Theme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'MovieDetails'>;
 
@@ -62,7 +63,9 @@ export const MovieDetailsScreen = ({route}: Props) => {
             {movieDetails.title}
           </Title>
 
-          <BodyText {...genreStyles}>{movieDetails.tagline}</BodyText>
+          <BodyText fontFamily={genreStyles.fontFamily}>
+            {movieDetails.tagline}
+          </BodyText>
           <MovieDetailsWrapper>
             <MovieImage
               source={{uri: getPosterURL(movieDetails.poster_path)}}
@@ -70,7 +73,7 @@ export const MovieDetailsScreen = ({route}: Props) => {
             <MovieDetailsSection>
               {!isMovieInWishlist ? (
                 <>
-                  <BodyText {...genreStyles} fontSize={18}>
+                  <BodyText fontFamily={genreStyles.fontFamily} fontSize={18}>
                     {t('watchLater')}
                   </BodyText>
                   <Button
@@ -85,10 +88,10 @@ export const MovieDetailsScreen = ({route}: Props) => {
                     <HeartIcon
                       height={20}
                       width={20}
-                      color={genreStyles.color}
+                      color={themeConfig.colors.black}
                     />
 
-                    <BodyText {...genreStyles} fontSize={18}>
+                    <BodyText fontFamily={genreStyles.fontFamily} fontSize={18}>
                       {t('inWishlist')}
                     </BodyText>
                   </ContentRow>
@@ -100,18 +103,18 @@ export const MovieDetailsScreen = ({route}: Props) => {
                   </Button>
                 </>
               )}
-              <BodyText {...genreStyles}>
+              <BodyText fontFamily={genreStyles.fontFamily}>
                 {t('releaseDate', {date: movieDetails.release_date})}
               </BodyText>
-              <BodyText {...genreStyles}>
+              <BodyText fontFamily={genreStyles.fontFamily}>
                 {t('runtime', {minutes: movieDetails.runtime})}
               </BodyText>
-              <BodyText {...genreStyles}>
+              <BodyText fontFamily={genreStyles.fontFamily}>
                 {t('genres', {
                   genres: movieDetails.genres.map(({name}) => name).join(', '),
                 })}
               </BodyText>
-              <BodyText {...genreStyles}>
+              <BodyText fontFamily={genreStyles.fontFamily}>
                 {t('production', {
                   companies: movieDetails.production_companies
                     .map(({name}) => name)
@@ -119,7 +122,7 @@ export const MovieDetailsScreen = ({route}: Props) => {
                 })}
               </BodyText>
               {belongsToCollection && (
-                <BodyText {...genreStyles}>
+                <BodyText fontFamily={genreStyles.fontFamily}>
                   {t('collection', {
                     collection: movieDetails.belongs_to_collection?.name,
                   })}
@@ -127,7 +130,7 @@ export const MovieDetailsScreen = ({route}: Props) => {
               )}
             </MovieDetailsSection>
           </MovieDetailsWrapper>
-          <BodyText {...genreStyles} fontSize={20}>
+          <BodyText fontFamily={genreStyles.fontFamily} fontSize={20}>
             {movieDetails.overview}
           </BodyText>
         </ContentWrapper>
