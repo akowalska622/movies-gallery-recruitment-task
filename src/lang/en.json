@@ -11,5 +11,7 @@
   "addToWishlist": "wishlist",
   "removeFromWishlist": "remove",
   "inWishlist": "In your wishlist",
-  "watchLater": "Want to watch it later?"
+  "watchLater": "Want to watch it later?",
+  "wishlistEmpty": "Your wishlist is empty",
+  "movieNotFound": "Movie not found, please try again"
 }

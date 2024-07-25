@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, View} from 'react-native';
+import {Image, View, ActivityIndicator} from 'react-native';
 import styled from 'styled-components/native';
 import {useTranslation} from 'react-i18next';
 
@@ -53,6 +53,12 @@ const DetailsCard = styled(View)`
   border-radius: 6px;
 `;
 
+const LoadingWrapper = styled(View)`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const MovieDetailsScreen = ({route}: Props) => {
   const {t} = useTranslation();
   const {movieId, genreId} = route.params;
@@ -63,10 +69,17 @@ export const MovieDetailsScreen = ({route}: Props) => {
 
   const belongsToCollection = !!movieDetails?.belongs_to_collection;
 
+  if (isLoading) {
+    return (
+      <LoadingWrapper>
+        <ActivityIndicator size="large" />
+      </LoadingWrapper>
+    );
+  }
+
   return (
     <ScreenWrapper isScrollView>
-      {isLoading && <Title>Loading...</Title>}
-      {!isLoading && !movieDetails && <Title>Movie not found</Title>}
+      {!isLoading && !movieDetails && <Title>{t('movieNotFound')}</Title>}
       {!isLoading && movieDetails && (
         <ContentWrapper>
           <Title {...genreStyles} fontSize={40}>

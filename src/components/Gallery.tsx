@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, View} from 'react-native';
+import {ScrollView, View, ActivityIndicator} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import styled from 'styled-components/native';
 
@@ -30,9 +30,14 @@ const TitleWrapper = styled(View)`
   margin-left: 16px;
 `;
 
+const LoadingWrapper = styled(View)`
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Gallery = ({genreId, title}: Props) => {
   const navigation = useNavigation<NavigationProp>();
-  // TODO add nice loading state
   const {movies, isLoading} = useMovies(genreId);
 
   return (
@@ -41,7 +46,9 @@ export const Gallery = ({genreId, title}: Props) => {
         <Title color={themeConfig.colors.black}>{title}</Title>
       </TitleWrapper>
       {isLoading ? (
-        <Title>Loading...</Title>
+        <LoadingWrapper>
+          <ActivityIndicator size="large" />
+        </LoadingWrapper>
       ) : (
         <GalleryView horizontal showsHorizontalScrollIndicator={false}>
           {movies.map(movie => (

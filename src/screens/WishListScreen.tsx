@@ -1,10 +1,11 @@
 import React from 'react';
-import {FlatList, Text, View, ListRenderItem} from 'react-native';
+import {useTranslation} from 'react-i18next';
+import {FlatList, ListRenderItem} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import type {NavigationProp} from '../types';
 
-import {Card} from '../components';
+import {Card, Title, EmptyView} from '../components';
 import {useWishList} from '../context';
 import {getPosterURL} from '../helpers';
 import {themeConfig} from '../Theme';
@@ -12,6 +13,7 @@ import {MovieDetails} from '../types';
 import {APP_ROUTES} from '../router/routes';
 
 export const WishListScreen = () => {
+  const {t} = useTranslation();
   const navigation = useNavigation<NavigationProp>();
   const {wishlist} = useWishList();
 
@@ -47,10 +49,9 @@ export const WishListScreen = () => {
           showsVerticalScrollIndicator={false}
         />
       ) : (
-        // TODO style empty screen
-        <View>
-          <Text> no items </Text>
-        </View>
+        <EmptyView>
+          <Title>{t('wishlistEmpty')}</Title>
+        </EmptyView>
       )}
     </>
   );
