@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, Pressable, PressableProps} from 'react-native';
 import styled, {css} from 'styled-components/native';
+import {SvgProps} from 'react-native-svg';
 
 interface ButtonProps extends PressableProps {
   color?: string;
@@ -8,6 +9,7 @@ interface ButtonProps extends PressableProps {
   fontFamily?: string;
   size?: 'small' | 'large';
   variant?: 'contained' | 'outlined' | 'text';
+  icon?: React.ComponentType<SvgProps>;
 }
 
 const sizeButtonStyles = {
@@ -59,6 +61,8 @@ const variantStyles = {
 
 const ButtonContainer = styled(Pressable)<ButtonProps>`
   border-radius: 6px;
+  flex-direction: row;
+  gap: 10px;
   align-items: center;
   justify-content: center;
   ${({size}) => sizeButtonStyles.wrapper[size || 'small']}
@@ -74,17 +78,21 @@ const ButtonText = styled(Text)<ButtonProps>`
   ${({variant}) => variantStyles.text[variant || 'contained']}
 `;
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button = ({
   size = 'small',
   variant = 'contained',
   children,
   fontFamily,
   color,
   fontColor,
+  icon: IconComponent,
   ...rest
-}) => {
+}: ButtonProps) => {
   return (
     <ButtonContainer size={size} variant={variant} color={color} {...rest}>
+      {IconComponent && (
+        <IconComponent width={20} height={20} color={fontColor} />
+      )}
       <ButtonText
         variant={variant}
         fontFamily={fontFamily}

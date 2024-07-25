@@ -16,9 +16,11 @@ import {
 import {useMovieDetails} from '../hooks';
 import {getGenreStyles, getPosterURL} from '../helpers';
 import {useWishList} from '../context';
-import HeartIcon from '../assets/icons/heart-icon.svg';
 import {themeConfig} from '../Theme';
 import {UNKNOWN_GENRE_STYLES} from '../constants';
+
+import HeartIcon from '../assets/icons/heart-icon.svg';
+import PlusIcon from '../assets/icons/plus-outline-icon.svg';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'MovieDetails'>;
 
@@ -79,7 +81,8 @@ export const MovieDetailsScreen = ({route}: Props) => {
                   </BodyText>
                   <Button
                     {...genreStyles}
-                    onPress={() => addToWishlist(movieDetails)}>
+                    onPress={() => addToWishlist(movieDetails)}
+                    icon={PlusIcon}>
                     {t('addToWishlist')}
                   </Button>
                 </>
