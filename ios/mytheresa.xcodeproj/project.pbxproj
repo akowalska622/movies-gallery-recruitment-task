@@ -8,23 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* mytheresaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* mytheresaTests.m */; };
-		0A2DA2760017467BB15599C5 /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAF8BAC5CEB5454284DD7312 /* DancingScript-Regular.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-mytheresa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-mytheresa.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1A176D976B0242F08F47D800 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3716A8A2E8BD4CEEB8909A8F /* Lato-Bold.ttf */; };
-		220840B0E1924DC58DBE7DB5 /* PlaywriteHRLijeva-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FFB1379B7B47489BC199AA /* PlaywriteHRLijeva-Thin.ttf */; };
-		5630BDE8A87642C5848E373B /* DancingScript-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049B5462F1C5414099F9D957 /* DancingScript-SemiBold.ttf */; };
+		391C4FE124134367BEB82E10 /* RobotoCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6D58A930F1B4C15B222BE6A /* RobotoCondensed-Medium.ttf */; };
 		5D391FA77CB345F1BB8C4ECE /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF63A9D304D64AF78C7595D9 /* Lato-Light.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-mytheresa-mytheresaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-mytheresa-mytheresaTests.a */; };
+		7D6D9D7083DF4169B378A32E /* EduHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F04B83661EA43E8A3EC9A8D /* EduHand-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8B8C3DA585F94E2CB7D4CBB1 /* PlaywriteHRLijeva-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF2F8F2AE29749E095497A93 /* PlaywriteHRLijeva-Light.ttf */; };
 		9092A2F51EBC401CAEDF78E5 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD7B9EC17EF24B098DB67375 /* Lato-Black.ttf */; };
 		92FF15CB453F3EC4B08A13DE /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3C5A9A0EBE4AFC66A7A71E0C /* PrivacyInfo.xcprivacy */; };
 		ADD25CB1FCE341DE84A572C0 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F6ADEACD0CB485E849D08F7 /* Lato-Regular.ttf */; };
-		E35D1C1A92294F7DA1BEAC05 /* PlaywriteHRLijeva-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F26729BE45547C9A65AA885 /* PlaywriteHRLijeva-Regular.ttf */; };
-		EC3D8D1CE96048329B26A7BF /* DancingScript-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26C08C4983EC4A1F891455B9 /* DancingScript-Medium.ttf */; };
+		BA21C631C11C42F3A4493911 /* RobotoCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E533A12BD97343F58CC3DFD9 /* RobotoCondensed-SemiBold.ttf */; };
+		CBCFFAB183EE41F28971EF63 /* EduHand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0003465FD2A14D739C222650 /* EduHand-Medium.ttf */; };
+		F46A13E98A1A4459BF424063 /* EduuHand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3D97AE443104237AA14BD79 /* EduuHand-Bold.ttf */; };
+		FE6976CA8D414B438E24E4A1 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E13811F540F24EA79966B597 /* RobotoCondensed-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0003465FD2A14D739C222650 /* EduHand-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EduHand-Medium.ttf"; path = "../assets/fonts/EduHand-Medium.ttf"; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* mytheresaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mytheresaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* mytheresaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mytheresaTests.m; sourceTree = "<group>"; };
-		049B5462F1C5414099F9D957 /* DancingScript-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-SemiBold.ttf"; path = "../assets/fonts/DancingScript-SemiBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* mytheresa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mytheresa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = mytheresa/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = mytheresa/AppDelegate.mm; sourceTree = "<group>"; };
@@ -50,23 +50,23 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = mytheresa/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = mytheresa/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-mytheresa-mytheresaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mytheresa-mytheresaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F26729BE45547C9A65AA885 /* PlaywriteHRLijeva-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "PlaywriteHRLijeva-Regular.ttf"; path = "../assets/fonts/PlaywriteHRLijeva-Regular.ttf"; sourceTree = "<group>"; };
-		26C08C4983EC4A1F891455B9 /* DancingScript-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-Medium.ttf"; path = "../assets/fonts/DancingScript-Medium.ttf"; sourceTree = "<group>"; };
-		3716A8A2E8BD4CEEB8909A8F /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		3716A8A2E8BD4CEEB8909A8F /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-mytheresa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mytheresa.debug.xcconfig"; path = "Target Support Files/Pods-mytheresa/Pods-mytheresa.debug.xcconfig"; sourceTree = "<group>"; };
-		3C5A9A0EBE4AFC66A7A71E0C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = mytheresa/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		3F6ADEACD0CB485E849D08F7 /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		3C5A9A0EBE4AFC66A7A71E0C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = mytheresa/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3F6ADEACD0CB485E849D08F7 /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		4F04B83661EA43E8A3EC9A8D /* EduHand-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EduHand-Regular.ttf"; path = "../assets/fonts/EduHand-Regular.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-mytheresa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mytheresa.release.xcconfig"; path = "Target Support Files/Pods-mytheresa/Pods-mytheresa.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-mytheresa-mytheresaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mytheresa-mytheresaTests.debug.xcconfig"; path = "Target Support Files/Pods-mytheresa-mytheresaTests/Pods-mytheresa-mytheresaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-mytheresa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mytheresa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = mytheresa/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-mytheresa-mytheresaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mytheresa-mytheresaTests.release.xcconfig"; path = "Target Support Files/Pods-mytheresa-mytheresaTests/Pods-mytheresa-mytheresaTests.release.xcconfig"; sourceTree = "<group>"; };
-		92FFB1379B7B47489BC199AA /* PlaywriteHRLijeva-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "PlaywriteHRLijeva-Thin.ttf"; path = "../assets/fonts/PlaywriteHRLijeva-Thin.ttf"; sourceTree = "<group>"; };
-		AAF8BAC5CEB5454284DD7312 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-Regular.ttf"; path = "../assets/fonts/DancingScript-Regular.ttf"; sourceTree = "<group>"; };
-		BD7B9EC17EF24B098DB67375 /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
-		DF2F8F2AE29749E095497A93 /* PlaywriteHRLijeva-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "PlaywriteHRLijeva-Light.ttf"; path = "../assets/fonts/PlaywriteHRLijeva-Light.ttf"; sourceTree = "<group>"; };
+		A6D58A930F1B4C15B222BE6A /* RobotoCondensed-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Medium.ttf"; path = "../assets/fonts/RobotoCondensed-Medium.ttf"; sourceTree = "<group>"; };
+		BD7B9EC17EF24B098DB67375 /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
+		E13811F540F24EA79966B597 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Regular.ttf"; path = "../assets/fonts/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		E3D97AE443104237AA14BD79 /* EduuHand-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EduuHand-Bold.ttf"; path = "../assets/fonts/EduuHand-Bold.ttf"; sourceTree = "<group>"; };
+		E533A12BD97343F58CC3DFD9 /* RobotoCondensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-SemiBold.ttf"; path = "../assets/fonts/RobotoCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		EF63A9D304D64AF78C7595D9 /* Lato-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Light.ttf"; path = "../assets/fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
+		EF63A9D304D64AF78C7595D9 /* Lato-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Light.ttf"; path = "../assets/fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,19 +166,18 @@
 		8A40A32F897E4EA98C9A812D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				26C08C4983EC4A1F891455B9 /* DancingScript-Medium.ttf */,
-				AAF8BAC5CEB5454284DD7312 /* DancingScript-Regular.ttf */,
-				049B5462F1C5414099F9D957 /* DancingScript-SemiBold.ttf */,
 				BD7B9EC17EF24B098DB67375 /* Lato-Black.ttf */,
 				3716A8A2E8BD4CEEB8909A8F /* Lato-Bold.ttf */,
 				EF63A9D304D64AF78C7595D9 /* Lato-Light.ttf */,
 				3F6ADEACD0CB485E849D08F7 /* Lato-Regular.ttf */,
-				DF2F8F2AE29749E095497A93 /* PlaywriteHRLijeva-Light.ttf */,
-				1F26729BE45547C9A65AA885 /* PlaywriteHRLijeva-Regular.ttf */,
-				92FFB1379B7B47489BC199AA /* PlaywriteHRLijeva-Thin.ttf */,
+				0003465FD2A14D739C222650 /* EduHand-Medium.ttf */,
+				4F04B83661EA43E8A3EC9A8D /* EduHand-Regular.ttf */,
+				E3D97AE443104237AA14BD79 /* EduuHand-Bold.ttf */,
+				A6D58A930F1B4C15B222BE6A /* RobotoCondensed-Medium.ttf */,
+				E13811F540F24EA79966B597 /* RobotoCondensed-Regular.ttf */,
+				E533A12BD97343F58CC3DFD9 /* RobotoCondensed-SemiBold.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -288,16 +287,16 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				92FF15CB453F3EC4B08A13DE /* PrivacyInfo.xcprivacy in Resources */,
-				EC3D8D1CE96048329B26A7BF /* DancingScript-Medium.ttf in Resources */,
-				0A2DA2760017467BB15599C5 /* DancingScript-Regular.ttf in Resources */,
-				5630BDE8A87642C5848E373B /* DancingScript-SemiBold.ttf in Resources */,
 				9092A2F51EBC401CAEDF78E5 /* Lato-Black.ttf in Resources */,
 				1A176D976B0242F08F47D800 /* Lato-Bold.ttf in Resources */,
 				5D391FA77CB345F1BB8C4ECE /* Lato-Light.ttf in Resources */,
 				ADD25CB1FCE341DE84A572C0 /* Lato-Regular.ttf in Resources */,
-				8B8C3DA585F94E2CB7D4CBB1 /* PlaywriteHRLijeva-Light.ttf in Resources */,
-				E35D1C1A92294F7DA1BEAC05 /* PlaywriteHRLijeva-Regular.ttf in Resources */,
-				220840B0E1924DC58DBE7DB5 /* PlaywriteHRLijeva-Thin.ttf in Resources */,
+				CBCFFAB183EE41F28971EF63 /* EduHand-Medium.ttf in Resources */,
+				7D6D9D7083DF4169B378A32E /* EduHand-Regular.ttf in Resources */,
+				F46A13E98A1A4459BF424063 /* EduuHand-Bold.ttf in Resources */,
+				391C4FE124134367BEB82E10 /* RobotoCondensed-Medium.ttf in Resources */,
+				FE6976CA8D414B438E24E4A1 /* RobotoCondensed-Regular.ttf in Resources */,
+				BA21C631C11C42F3A4493911 /* RobotoCondensed-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,9 +519,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 6U239JX2GF;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = mytheresa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Theresa Challenge";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -533,7 +535,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aniakowalska.mytheresa;
 				PRODUCT_NAME = mytheresa;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -547,8 +549,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 6U239JX2GF;
 				INFOPLIST_FILE = mytheresa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Theresa Challenge";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,7 +564,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aniakowalska.mytheresa;
 				PRODUCT_NAME = mytheresa;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -639,10 +644,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -714,10 +716,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

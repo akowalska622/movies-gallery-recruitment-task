@@ -22,7 +22,7 @@ export const GENRE_MAP = {
     styles: {
       color: themeConfig.colors.orange,
       fontColor: themeConfig.colors.white,
-      fontFamily: 'DancingScript-Regular',
+      fontFamily: 'EduHand-Regular',
     },
   },
   [GENRE_ID.DOCUMENTARY]: {
@@ -31,7 +31,7 @@ export const GENRE_MAP = {
     styles: {
       color: themeConfig.colors.teal,
       fontColor: themeConfig.colors.white,
-      fontFamily: 'PlaywriteHRLijeva-Regular',
+      fontFamily: 'RobotoCondensed-Regular',
     },
   },
 } as const;

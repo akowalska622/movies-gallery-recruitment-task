@@ -17,7 +17,7 @@ describe('getGenreStyles', () => {
     expect(styles).toEqual({
       color: '#e27d4a',
       fontColor: '#fff',
-      fontFamily: 'DancingScript-Regular',
+      fontFamily: 'EduHand-Regular',
     });
   });
 
@@ -27,7 +27,7 @@ describe('getGenreStyles', () => {
     expect(styles).toEqual({
       color: '#5C8374',
       fontColor: '#fff',
-      fontFamily: 'PlaywriteHRLijeva-Regular',
+      fontFamily: 'RobotoCondensed-Regular',
     });
   });
 });

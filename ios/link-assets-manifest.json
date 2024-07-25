@@ -2,16 +2,16 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "assets/fonts/DancingScript-Medium.ttf",
-      "sha1": "575d42d95b4b562cbd91341e61ab754386ffeadd"
+      "path": "assets/fonts/EduHand-Medium.ttf",
+      "sha1": "eb9c391e639de0f55aa03e13d48016e1b670d68b"
     },
     {
-      "path": "assets/fonts/DancingScript-Regular.ttf",
-      "sha1": "77b7bf804974618d28d7b73c79ea5d34c82cb704"
+      "path": "assets/fonts/EduHand-Regular.ttf",
+      "sha1": "ec74584f2548aa4927967805d22cb1d762d1405a"
     },
     {
-      "path": "assets/fonts/DancingScript-SemiBold.ttf",
-      "sha1": "3d2e9198ccd497e0ccaf29b53cd2e4e9063dc78a"
+      "path": "assets/fonts/EduuHand-Bold.ttf",
+      "sha1": "c0d8a08c89119017ebfeb7dd1c34535a3d6b2aa2"
     },
     {
       "path": "assets/fonts/Lato-Black.ttf",
@@ -30,16 +30,16 @@
       "sha1": "e923c72eda5e50a87e18ff5c71e9ef4b3b6455a3"
     },
     {
-      "path": "assets/fonts/PlaywriteHRLijeva-Light.ttf",
-      "sha1": "977b1c8b5d21bde5a3439fa31bd63913feb9f5a8"
+      "path": "assets/fonts/RobotoCondensed-Medium.ttf",
+      "sha1": "c02a42f87357385f705de05763e4745694453220"
     },
     {
-      "path": "assets/fonts/PlaywriteHRLijeva-Regular.ttf",
-      "sha1": "455e01a35191b56f712665a29290a7124a30d463"
+      "path": "assets/fonts/RobotoCondensed-Regular.ttf",
+      "sha1": "6e10f28cd359dec89ac44767b2e61a888db70cd0"
     },
     {
-      "path": "assets/fonts/PlaywriteHRLijeva-Thin.ttf",
-      "sha1": "6bee9c86109a26aa7b97f403fd7dee8b89f93fe1"
+      "path": "assets/fonts/RobotoCondensed-SemiBold.ttf",
+      "sha1": "d6c03db3daf7f6e3fa90ba420edf8220ac6a79b7"
     }
   ]
 }
