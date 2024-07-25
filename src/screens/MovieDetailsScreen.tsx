@@ -46,6 +46,13 @@ const MovieImage = styled(Image)`
   width: 160px;
 `;
 
+const DetailsCard = styled(View)`
+  background-color: #e3e3e3;
+  padding: 5px;
+  gap: 5px;
+  border-radius: 6px;
+`;
+
 export const MovieDetailsScreen = ({route}: Props) => {
   const {t} = useTranslation();
   const {movieId, genreId} = route.params;
@@ -107,31 +114,33 @@ export const MovieDetailsScreen = ({route}: Props) => {
                   </Button>
                 </>
               )}
-              <BodyText fontFamily={genreStyles.fontFamily}>
-                {t('releaseDate', {date: movieDetails.release_date})}
-              </BodyText>
-              <BodyText fontFamily={genreStyles.fontFamily}>
-                {t('runtime', {minutes: movieDetails.runtime})}
-              </BodyText>
-              <BodyText fontFamily={genreStyles.fontFamily}>
-                {t('genres', {
-                  genres: movieDetails.genres.map(({name}) => name).join(', '),
-                })}
-              </BodyText>
-              <BodyText fontFamily={genreStyles.fontFamily}>
-                {t('production', {
-                  companies: movieDetails.production_companies
-                    .map(({name}) => name)
-                    .join(', '),
-                })}
-              </BodyText>
-              {belongsToCollection && (
+              <DetailsCard>
                 <BodyText fontFamily={genreStyles.fontFamily}>
-                  {t('collection', {
-                    collection: movieDetails.belongs_to_collection?.name,
+                  {t('releaseDate', {date: movieDetails.release_date})}
+                </BodyText>
+                <BodyText fontFamily={genreStyles.fontFamily}>
+                  {t('runtime', {minutes: movieDetails.runtime})}
+                </BodyText>
+                <BodyText fontFamily={genreStyles.fontFamily}>
+                  {t('genres', {
+                    genres: movieDetails.genres
+                      .map(({name}) => name)
+                      .join(', '),
                   })}
                 </BodyText>
-              )}
+                <BodyText fontFamily={genreStyles.fontFamily}>
+                  {t('production', {
+                    companies: movieDetails.production_companies[0].name,
+                  })}
+                </BodyText>
+                {belongsToCollection && (
+                  <BodyText fontFamily={genreStyles.fontFamily}>
+                    {t('collection', {
+                      collection: movieDetails.belongs_to_collection?.name,
+                    })}
+                  </BodyText>
+                )}
+              </DetailsCard>
             </MovieDetailsSection>
           </MovieDetailsWrapper>
           <BodyText fontFamily={genreStyles.fontFamily} fontSize={20}>
