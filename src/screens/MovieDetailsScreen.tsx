@@ -141,11 +141,6 @@ export const MovieDetailsScreen = ({route}: Props) => {
                       .join(', '),
                   })}
                 </BodyText>
-                <BodyText fontFamily={genreStyles.fontFamily}>
-                  {t('production', {
-                    companies: movieDetails.production_companies[0].name,
-                  })}
-                </BodyText>
                 {belongsToCollection && (
                   <BodyText fontFamily={genreStyles.fontFamily}>
                     {t('collection', {

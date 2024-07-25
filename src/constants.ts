@@ -38,6 +38,6 @@ export const GENRE_MAP = {
 
 export const UNKNOWN_GENRE_STYLES = {
   color: themeConfig.colors.pink,
-  fontColor: themeConfig.colors.black,
+  fontColor: themeConfig.colors.white,
   fontFamily: 'Lato-Regular',
 } as const;
