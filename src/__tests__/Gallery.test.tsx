@@ -1,4 +1,3 @@
-// Gallery.test.tsx
 import React from 'react';
 import {screen, waitFor} from '@testing-library/react-native';
 import {Gallery} from '../components/Gallery';

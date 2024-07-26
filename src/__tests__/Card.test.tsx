@@ -1,4 +1,3 @@
-// Card.test.tsx
 import React from 'react';
 import {screen, fireEvent} from '@testing-library/react-native';
 import {Card} from '../components/Card';

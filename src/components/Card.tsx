@@ -1,4 +1,3 @@
-// Card.tsx
 import React from 'react';
 import {View, Image, Pressable} from 'react-native';
 import styled from 'styled-components/native';
